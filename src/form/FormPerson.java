@@ -78,9 +78,11 @@ public class FormPerson extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbtnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnSaveActionPerformed
+        //getValue() vraca prazan string ako je los unos, tj ako ima brojeva u njima
         String firstName = (String)panelFirstName.getValue();
         String lastName = (String)panelLastName.getValue();
-        
+    
+        //prikazuje poruku samo ako je bio dobar unos za ime i prezime
         if (!firstName.isEmpty() && !lastName.isEmpty()) {
             JOptionPane.showMessageDialog(this, firstName + " " + lastName,"Person",JOptionPane.INFORMATION_MESSAGE);
         }
